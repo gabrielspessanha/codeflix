@@ -1,12 +1,15 @@
 import express from 'express'
 import { database } from './database'
 import { adminJsRouter, adminjs } from './adminjs'
+import { router } from './router'
 
 const app = express()
 app.use(express.static('public'))
 app.use(adminjs.options.rootPath, adminJsRouter)
 
 const PORT = process.env.port || 3000
+
+app.use(router)
 
 app.listen(PORT, ()=>{
   database.authenticate().then(() => {
