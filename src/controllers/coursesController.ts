@@ -52,6 +52,4 @@ export const  coursesController = {
       }
     }
   }
-  
-
 }
