@@ -6,7 +6,7 @@ import { router } from './router'
 const app = express()
 app.use(express.static('public'))
 app.use(adminjs.options.rootPath, adminJsRouter)
-
+app.use(express.json())
 const PORT = process.env.port || 3000
 
 app.use(router)
