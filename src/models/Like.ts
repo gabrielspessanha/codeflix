@@ -1,19 +1,15 @@
 import { DataTypes, Model } from "sequelize"
-import { CourseInstance } from "./Course"
-import { UserInstance } from "./User"
 import { database } from "../database"
 
-export interface Favorite {
+
+export interface Like {
   userId: number
   courseId: number
 }
 
-export interface FavoriteInstance extends Model<Favorite>, Favorite{
-  Course?:CourseInstance
-  User?:UserInstance
-}
+export interface LikeInstance extends Model<Like>, Like {}
 
-export const Favorite = database.define<FavoriteInstance, Favorite> ('Favorite',{
+export const Like = database.define<LikeInstance, Like>('Like', {
   userId: {
     allowNull: false,
     primaryKey: true,
