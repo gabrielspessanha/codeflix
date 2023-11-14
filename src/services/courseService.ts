@@ -71,7 +71,6 @@ export const courseService ={
       LIMIT 10;
       `
     )
-
     if(result) {
       const [topTen] = result
       return topTen
