@@ -7,9 +7,9 @@ export interface WatchTimeAttributes{
   episodeId: number
 }
 
-export interface WatchTimeeInstance extends Model<WatchTimeAttributes>, WatchTimeAttributes{}
+export interface WatchTimeInstance extends Model<WatchTimeAttributes>, WatchTimeAttributes{}
 
-export const WatchTime = database.define<WatchTimeeInstance, WatchTimeAttributes>('WatchTime', {
+export const WatchTime = database.define<WatchTimeInstance, WatchTimeAttributes>('WatchTime', {
   seconds: {
     allowNull: false,
     type: DataTypes.INTEGER
